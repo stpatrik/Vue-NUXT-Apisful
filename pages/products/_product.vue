@@ -46,7 +46,7 @@
         </div>
         <div class="product-info__buttons">
           <button class="btn btn--primary btn--large" @click="addToCart">
-            Добавить в карзину
+            Добавить в корзину
           </button>
         </div>
       </div>
