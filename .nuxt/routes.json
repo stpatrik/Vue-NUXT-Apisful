@@ -1,0 +1,44 @@
+[
+  {
+    "name": "cart",
+    "path": "/cart",
+    "component": "D:\\\\apisful_test\\\\pages\\\\cart.vue",
+    "chunkName": "pages/cart",
+    "_name": "_915facfa"
+  },
+  {
+    "name": "categories",
+    "path": "/categories",
+    "component": "D:\\\\apisful_test\\\\pages\\\\categories\\\\index.vue",
+    "chunkName": "pages/categories/index",
+    "_name": "_6a47653a"
+  },
+  {
+    "name": "products",
+    "path": "/products",
+    "component": "D:\\\\apisful_test\\\\pages\\\\products\\\\index.vue",
+    "chunkName": "pages/products/index",
+    "_name": "_3049e65b"
+  },
+  {
+    "name": "categories-category",
+    "path": "/categories/:category",
+    "component": "D:\\\\apisful_test\\\\pages\\\\categories\\\\_category.vue",
+    "chunkName": "pages/categories/_category",
+    "_name": "_55d59e24"
+  },
+  {
+    "name": "products-product",
+    "path": "/products/:product",
+    "component": "D:\\\\apisful_test\\\\pages\\\\products\\\\_product.vue",
+    "chunkName": "pages/products/_product",
+    "_name": "_4dee8e92"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "D:\\\\apisful_test\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_0efde002"
+  }
+]
