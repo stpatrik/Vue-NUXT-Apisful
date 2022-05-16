@@ -29,6 +29,10 @@
               <label class="field__label">Полное имя</label>
               <input v-model="fullName" type="text" class="field__input">
             </div>
+            <div class="field" :class="{ 'field--invalid': isCompanyNameInvalid }">
+              <label class="field__label">Имя компании </label>
+              <input v-model="companyName" type="text" class="field__input">
+            </div>
             <div class="field" :class="{ 'field--invalid': isEmailInvalid }">
               <label class="field__label">Email</label>
               <input v-model="email" type="text" class="field__input">

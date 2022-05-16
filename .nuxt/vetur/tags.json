@@ -11,12 +11,6 @@
   "LazyCartProductsList": {
     "description": "Auto imported from components/cart/CartProductsList.vue"
   },
-  "ProductGallery": {
-    "description": "Auto imported from components/product-details/ProductGallery.vue"
-  },
-  "LazyProductGallery": {
-    "description": "Auto imported from components/product-details/ProductGallery.vue"
-  },
   "CommonProductsListPage": {
     "description": "Auto imported from components/products-list/CommonProductsListPage.vue"
   },
@@ -40,5 +34,11 @@
   },
   "LazyProductsListFilter": {
     "description": "Auto imported from components/products-list/ProductsListFilter.vue"
+  },
+  "ProductGallery": {
+    "description": "Auto imported from components/product-details/ProductGallery.vue"
+  },
+  "LazyProductGallery": {
+    "description": "Auto imported from components/product-details/ProductGallery.vue"
   }
 }
