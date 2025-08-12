@@ -29,7 +29,8 @@ export const mutations = {
   addProduct (state, { product, color, size, price }) {
     const key = product.id + color + size + price
     if (state.products[key]) {
-      // increment
+      // increment quantity when the product already exists in the cart
+      Vue.set(state.products[key], 'qty', state.products[key].qty + 1)
     } else {
       // add new
       Vue.set(state.products, key, {
