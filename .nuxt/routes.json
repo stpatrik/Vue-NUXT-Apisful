@@ -2,43 +2,43 @@
   {
     "name": "cart",
     "path": "/cart",
-    "component": "D:\\\\apisful_test\\\\pages\\\\cart.vue",
+    "component": "/Users/airapetov2002/Downloads/apistful /test_apisful/pages/cart.vue",
     "chunkName": "pages/cart",
-    "_name": "_915facfa"
+    "_name": "_f4a355f4"
   },
   {
     "name": "categories",
     "path": "/categories",
-    "component": "D:\\\\apisful_test\\\\pages\\\\categories\\\\index.vue",
+    "component": "/Users/airapetov2002/Downloads/apistful /test_apisful/pages/categories/index.vue",
     "chunkName": "pages/categories/index",
-    "_name": "_6a47653a"
+    "_name": "_73bd26f6"
   },
   {
     "name": "products",
     "path": "/products",
-    "component": "D:\\\\apisful_test\\\\pages\\\\products\\\\index.vue",
+    "component": "/Users/airapetov2002/Downloads/apistful /test_apisful/pages/products/index.vue",
     "chunkName": "pages/products/index",
-    "_name": "_3049e65b"
-  },
-  {
-    "name": "categories-category",
-    "path": "/categories/:category",
-    "component": "D:\\\\apisful_test\\\\pages\\\\categories\\\\_category.vue",
-    "chunkName": "pages/categories/_category",
-    "_name": "_55d59e24"
-  },
-  {
-    "name": "products-product",
-    "path": "/products/:product",
-    "component": "D:\\\\apisful_test\\\\pages\\\\products\\\\_product.vue",
-    "chunkName": "pages/products/_product",
-    "_name": "_4dee8e92"
+    "_name": "_07ea8d66"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "D:\\\\apisful_test\\\\pages\\\\index.vue",
+    "component": "/Users/airapetov2002/Downloads/apistful /test_apisful/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_0efde002"
+    "_name": "_142f5648"
+  },
+  {
+    "name": "categories-category",
+    "path": "/categories/:category",
+    "component": "/Users/airapetov2002/Downloads/apistful /test_apisful/pages/categories/_category.vue",
+    "chunkName": "pages/categories/_category",
+    "_name": "_5c91ef10"
+  },
+  {
+    "name": "products-product",
+    "path": "/products/:product",
+    "component": "/Users/airapetov2002/Downloads/apistful /test_apisful/pages/products/_product.vue",
+    "chunkName": "pages/products/_product",
+    "_name": "_55a6aef6"
   }
 ]

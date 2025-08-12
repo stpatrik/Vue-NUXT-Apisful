@@ -1,7 +1,7 @@
 import Vue from 'vue';
 require('intersection-observer');
 
-let options = {"images":true,"videos":true,"audios":true,"iframes":true,"native":false,"polyfill":true,"directiveOnly":false,"loadingClass":"isLoading","loadedClass":"isLoaded","appendClass":"lazyLoad","observerConfig":{},"globalName":"nuxt"};
+let options = {"images":true,"videos":true,"audios":true,"iframes":true,"native":false,"directiveOnly":false,"loadingClass":"isLoading","loadedClass":"isLoaded","appendClass":"lazyLoad","observerConfig":{},"globalName":"nuxt"};
 let observer = null;
 let attributes = ['src', 'poster', 'srcset'];
 let elementsMap = {
@@ -45,16 +45,18 @@ const setBackground = (el) =>{
 
 const setClasses = (el, type) =>{
   let elementTagName = el.tagName.toLowerCase();
-  if(['img', 'video'].includes(elementTagName)){
-    let eventName = elementTagName === 'img' ? 'load' : 'loadeddata';
+  if(['img', 'picture', 'video'].includes(elementTagName)){
+    el = elementTagName === 'picture' ? el.querySelector('img') : el;
+    let eventName = elementTagName === 'video' ? 'loadeddata' : 'load';
+    const e = elementTagName === 'picture' ? el.parentNode : el;
     if(options.loadingClass !== false && type === 'loading'){
-      el.classList.add(options.loadingClass)
+      e.classList.add(options.loadingClass)
       el.addEventListener(eventName, () =>{
-        el.classList.remove(options.loadingClass)
+        e.classList.remove(options.loadingClass)
       });
     } else if(options.loadedClass !== false && type === 'loaded'){
       el.addEventListener(eventName, () =>{
-        el.classList.add(options.loadedClass)
+        e.classList.add(options.loadedClass)
       });
     }
   } else if(type === 'loaded' && options.loadedClass !== false){
@@ -97,7 +99,7 @@ const vLazyLoad = Vue.directive('lazy-load', {
 
   update(el, {value, def}, vNode, oldVnode) {
     for(let attribute of attributes){
-      if(oldVnode.data.attrs[`data-${attribute}`] !== vNode.data.attrs[`data-${attribute}`]){
+      if(oldVnode.data.attrs && vNode.data.attrs && oldVnode.data.attrs[`data-${attribute}`] !== vNode.data.attrs[`data-${attribute}`]){
         def.set(el, value);
         break;
       }
@@ -206,59 +208,59 @@ const lazyLoadInject = (e) =>{
 }
 
 // IE Polyfill
-if (!Array.from && options.polyfill) {
-  Array.from = (function () {
-    var toStr = Object.prototype.toString;
-    var isCallable = function (fn) {
-      return typeof fn === 'function' || toStr.call(fn) === '[object Function]';
-    };
-    var toInteger = function (value) {
-      var number = Number(value);
-      if (isNaN(number)) { return 0; }
-      if (number === 0 || !isFinite(number)) { return number; }
-      return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));
-    };
-    var maxSafeInteger = Math.pow(2, 53) - 1;
-    var toLength = function (value) {
-      var len = toInteger(value);
-      return Math.min(Math.max(len, 0), maxSafeInteger);
-    };
+// if (!Array.from && options.polyfill) {
+//   Array.from = (function () {
+//     var toStr = Object.prototype.toString;
+//     var isCallable = function (fn) {
+//       return typeof fn === 'function' || toStr.call(fn) === '[object Function]';
+//     };
+//     var toInteger = function (value) {
+//       var number = Number(value);
+//       if (isNaN(number)) { return 0; }
+//       if (number === 0 || !isFinite(number)) { return number; }
+//       return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));
+//     };
+//     var maxSafeInteger = Math.pow(2, 53) - 1;
+//     var toLength = function (value) {
+//       var len = toInteger(value);
+//       return Math.min(Math.max(len, 0), maxSafeInteger);
+//     };
 
-    return function from(arrayLike) {
-      var C = this;
-      var items = Object(arrayLike);
-      if (arrayLike == null) {
-        throw new TypeError("Array.from requires an array-like object - not null or undefined");
-      }
-      var mapFn = arguments.length > 1 ? arguments[1] : void undefined;
-      var T;
-      if (typeof mapFn !== 'undefined') {
-        if (!isCallable(mapFn)) {
-          throw new TypeError('Array.from: when provided, the second argument must be a function');
-        }
+//     return function from(arrayLike) {
+//       var C = this;
+//       var items = Object(arrayLike);
+//       if (arrayLike == null) {
+//         throw new TypeError("Array.from requires an array-like object - not null or undefined");
+//       }
+//       var mapFn = arguments.length > 1 ? arguments[1] : void undefined;
+//       var T;
+//       if (typeof mapFn !== 'undefined') {
+//         if (!isCallable(mapFn)) {
+//           throw new TypeError('Array.from: when provided, the second argument must be a function');
+//         }
 
-        if (arguments.length > 2) {
-          T = arguments[2];
-        }
-      }
-      var len = toLength(items.length);
-      var A = isCallable(C) ? Object(new C(len)) : new Array(len);
-      var k = 0;
-      var kValue;
-      while (k < len) {
-        kValue = items[k];
-        if (mapFn) {
-          A[k] = typeof T === 'undefined' ? mapFn(kValue, k) : mapFn.call(T, kValue, k);
-        } else {
-          A[k] = kValue;
-        }
-        k += 1;
-      }
-      A.length = len;
-      return A;
-    };
-  }());
-}
+//         if (arguments.length > 2) {
+//           T = arguments[2];
+//         }
+//       }
+//       var len = toLength(items.length);
+//       var A = isCallable(C) ? Object(new C(len)) : new Array(len);
+//       var k = 0;
+//       var kValue;
+//       while (k < len) {
+//         kValue = items[k];
+//         if (mapFn) {
+//           A[k] = typeof T === 'undefined' ? mapFn(kValue, k) : mapFn.call(T, kValue, k);
+//         } else {
+//           A[k] = kValue;
+//         }
+//         k += 1;
+//       }
+//       A.length = len;
+//       return A;
+//     };
+//   }());
+// }
 
 export default (context, inject) =>{
   inject('lazyLoad', lazyLoadInject)
