@@ -1,1 +1,0 @@
-The icons are taken from https://github.com/sschoger/heroicons-ui
