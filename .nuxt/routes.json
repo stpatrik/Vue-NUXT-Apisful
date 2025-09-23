@@ -1,0 +1,44 @@
+[
+  {
+    "name": "cart",
+    "path": "/cart",
+    "component": "C:\\\\Users\\\\Georgy\\\\Desktop\\\\mooz-movie-catalog\\\\diplom\\\\test_apisful\\\\pages\\\\cart.vue",
+    "chunkName": "pages/cart",
+    "_name": "_46cdccdc"
+  },
+  {
+    "name": "categories",
+    "path": "/categories",
+    "component": "C:\\\\Users\\\\Georgy\\\\Desktop\\\\mooz-movie-catalog\\\\diplom\\\\test_apisful\\\\pages\\\\categories\\\\index.vue",
+    "chunkName": "pages/categories/index",
+    "_name": "_680abaac"
+  },
+  {
+    "name": "products",
+    "path": "/products",
+    "component": "C:\\\\Users\\\\Georgy\\\\Desktop\\\\mooz-movie-catalog\\\\diplom\\\\test_apisful\\\\pages\\\\products\\\\index.vue",
+    "chunkName": "pages/products/index",
+    "_name": "_6c8a3d3c"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\Georgy\\\\Desktop\\\\mooz-movie-catalog\\\\diplom\\\\test_apisful\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_58b7d7c6"
+  },
+  {
+    "name": "categories-category",
+    "path": "/categories/:category",
+    "component": "C:\\\\Users\\\\Georgy\\\\Desktop\\\\mooz-movie-catalog\\\\diplom\\\\test_apisful\\\\pages\\\\categories\\\\_category.vue",
+    "chunkName": "pages/categories/_category",
+    "_name": "_6e2cea96"
+  },
+  {
+    "name": "products-product",
+    "path": "/products/:product",
+    "component": "C:\\\\Users\\\\Georgy\\\\Desktop\\\\mooz-movie-catalog\\\\diplom\\\\test_apisful\\\\pages\\\\products\\\\_product.vue",
+    "chunkName": "pages/products/_product",
+    "_name": "_0895e760"
+  }
+]

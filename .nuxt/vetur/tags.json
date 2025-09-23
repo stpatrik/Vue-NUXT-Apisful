@@ -1,0 +1,23 @@
+{
+  "CommonNavbar": {
+    "description": "Auto imported from components/CommonNavbar.vue"
+  },
+  "CartProductsList": {
+    "description": "Auto imported from components/cart/CartProductsList.vue"
+  },
+  "ProductGallery": {
+    "description": "Auto imported from components/product-details/ProductGallery.vue"
+  },
+  "ProductsListCommonProductsListPage": {
+    "description": "Auto imported from components/products-list/CommonProductsListPage.vue"
+  },
+  "ProductsListProductListCard": {
+    "description": "Auto imported from components/products-list/ProductListCard.vue"
+  },
+  "ProductsList": {
+    "description": "Auto imported from components/products-list/ProductsList.vue"
+  },
+  "ProductsListFilter": {
+    "description": "Auto imported from components/products-list/ProductsListFilter.vue"
+  }
+}
