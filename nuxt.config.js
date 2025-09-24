@@ -77,7 +77,7 @@ export default {
   ** Router base for GitHub Pages
   */
   router: {
-    base: '/test_apisful/'
+    base: '/Vue-NUXT-Apisful/'
   },
   /*
   ** Generate config for static hosting (GH Pages needs 404.html)
