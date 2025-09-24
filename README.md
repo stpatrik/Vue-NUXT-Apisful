@@ -1,4 +1,4 @@
-# test_apisful (Kluber Shop)
+# Vue-NUXT-Apisful (Kluber Shop)
 
 Проект на Nuxt.js 2: SPA c генерацией статического сайта (target: static) и автодеплоем на GitHub Pages.
 
