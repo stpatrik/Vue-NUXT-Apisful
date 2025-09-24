@@ -27,13 +27,13 @@ yarn generate
 
 ## Деплой на GitHub Pages (уже настроено)
 - В nuxt.config.js установлено:
-  - router.base = '/test_apisful/'
+  - router.base = '/Vue-NUXT-Apisful/'
   - generate.fallback = '404.html' (SPA-роутинг через 404.html)
 - В репозитории есть .github/workflows/deploy.yml — GitHub Actions автоматически собирает проект командой `yarn generate` и деплоит папку dist на Pages.
 - В Settings → Pages выбери Source: GitHub Actions.
 
 После пуша сайт будет доступен по адресу:
-https://stpatrik.github.io/test_apisful/
+https://stpatrik.github.io/Vue-NUXT-Apisful/
 
 ## Структура проекта
 ```
@@ -51,7 +51,7 @@ https://stpatrik.github.io/test_apisful/
 
 ## Частые проблемы
 - Windows: ошибка invalid path 'file ' при клоне. Решение: git clone --no-checkout + sparse-checkout c исключением проблемного файла, либо WSL/SSH-клон, либо загрузка файлов через GitHub Web.
-- Pages отдает 404 на вложенных ссылках. Решение: generate.fallback = '404.html' в nuxt.config.js и router.base = '/test_apisful/'.
+- Pages отдает 404 на вложенных ссылках. Решение: generate.fallback = '404.html' в nuxt.config.js и router.base = '/Vue-NUXT-Apisful/'.
 
 ## Лицензия
 MIT
